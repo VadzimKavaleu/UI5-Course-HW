@@ -1,0 +1,55 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns:form="sap.ui.layout.form" xmlns="sap.m" xmlns:core="sap.ui.core"
+	controllerName="ZKAV.HW2_UI5_COURSE.controller.View1" displayBlock="true">
+	<Shell id="shell">
+		<App id="app">
+			<SplitContainer id="SplitContDemo">
+				<masterPages>
+					<Page id="detail" title="{i18n>detailMenu}" class="sapUiStdPage">
+						<content>
+							<List>
+								<items>
+									<StandardListItem title="{i18n>inputView}" type="Navigation" xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
+										press="action" action:wiring="\{'press':\{'navigation':\{'routeName':'View2'\}\}\}"/>
+									<StandardListItem title="{i18n>modelView}" type="Navigation" xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
+										press="action" action:wiring="\{'press':\{'navigation':\{'routeName':'View3'\}\}\}"/>
+									<StandardListItem title="{i18n>deploydView}" type="Navigation"
+										xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" press="action"
+										action:wiring="\{'press':\{'navigation':\{'routeName':'View4'\}\}\}"/>
+									<StandardListItem title="{i18n>oDataView}" type="Navigation" xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
+										press="action" action:wiring="\{'press':\{'navigation':\{'routeName':'oData'\}\}\}"/>
+										<StandardListItem title="{i18n>tittleView6}" type="Navigation" xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
+										press="action" action:wiring="\{'press':\{'navigation':\{'routeName':'plantODataView'\}\}\}"/>
+								</items>
+							</List>
+						</content>
+					</Page>
+				</masterPages>
+				<detailPages>
+					<Page id="page" title="{i18n>view1}">
+						<headerContent>
+							<Button xmlns="sap.m" xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" id="button0"
+								tooltip="{i18n>buttonNext}" press="action" action:wiring="\{'press':\{'navigation':\{'routeName':'View2'\}\}\}"
+								icon="sap-icon://navigation-right-arrow"/>
+						</headerContent>
+						<content>
+							<form:SimpleForm editable="true" layout="ResponsiveGridLayout" id="form0">
+								<form:content>
+									<core:Title text="{i18n>tittle}" id="title0"/>
+									<Label text="{i18n>personName}" id="lblName"/>
+									<Input width="50%" id="input0" value="{/Name}" placeholder="Enter your name"/>
+									<Label text="{i18n>personDescription}" id="lblAge"/>
+									<Input width="50%" id="input1" value="{/Description}" placeholder="Enter your description"/>
+								</form:content>
+							</form:SimpleForm>
+							<Toolbar width="100%" id="toolbar1">
+								<content>
+									<Button text="{i18n>buttonSubmit}" id="button1" icon="sap-icon://accept" press="onSend"/>
+								</content>
+							</Toolbar>
+						</content>
+					</Page>
+				</detailPages>
+			</SplitContainer>
+		</App>
+	</Shell>
+</mvc:View>

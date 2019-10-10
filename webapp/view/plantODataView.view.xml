@@ -1,0 +1,43 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="ZKAV.HW2_UI5_COURSE.controller.plantODataView"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<App>
+		<pages>
+			<Page title="{i18n>tittleView6}">
+			<headerContent>
+					<Button xmlns="sap.m" xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" text="{i18n>buttonMain}" id="button1" icon="sap-icon://back-to-top" press="action" action:wiring="\{'press':\{'navigation':\{'routeName':'View1'\}\}\}"/>
+				</headerContent>
+				<content>
+						<Table items="{plant>/value}" id="List">
+						<items>
+							<ColumnListItem type="Navigation" press="onClick" id="item0">
+								<cells>
+									<Text text="{plant>_id}" id="text0"/>
+									<Text text="{plant>name}" id="text1"/>
+									<Text text="{plant>description}" id="text2"/>									
+								</cells>
+							</ColumnListItem>
+						</items>
+						<columns>
+							<Column id="column0">
+								<header>
+									<Label text="{i18n>personId}" id="label0"/>
+								</header>
+							</Column>
+							<Column id="column1">
+								<header>
+									<Label text="{i18n>personName}" id="label1"/>
+								</header>
+							</Column>
+							<Column id="column2">
+								<header>
+									<Label text="{i18n>personDescription}" id="label2"/>
+								</header>
+							</Column>
+							
+						</columns>
+					</Table>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

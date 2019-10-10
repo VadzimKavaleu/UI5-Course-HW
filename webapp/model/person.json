@@ -1,0 +1,27 @@
+{
+	"person": [{
+		"Num1": "1",
+		"Name1": "Vasya",
+		"Description1": "Student",
+		"Course1": "2",
+		"Group1": "2"
+	}, {
+		"Num1": "2",
+		"Name1": "Petya",
+		"Description1": "Worker",
+		"Course1": "2",
+		"Group1": "2"
+	}, {
+		"Num1": "3",
+		"Name1": "Alina",
+		"Description1": "Student",
+		"Course1": "2",
+		"Group1": "2"
+	}, {
+		"Num1": "4",
+		"Name1": "Svetlana",
+		"Description1": "Student",
+		"Course1": "2",
+		"Group1": "2"
+	}]
+}

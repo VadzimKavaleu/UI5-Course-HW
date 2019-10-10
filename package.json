@@ -1,0 +1,22 @@
+{
+  "name": "package.json",
+  "version": "0.0.1",
+  "private": true,
+  "devDependencies": {
+    "@ui5/cli": "1.7.0",
+    "@sap/ui5-builder-webide-extension": "1.0.5"
+  },
+  "scripts": {
+    "build": "ui5 build --include-task=generateManifestBundle generateCachebusterInfo"
+  },
+  "ui5": {
+    "dependencies": [
+      "@sap/ui5-builder-webide-extension"
+    ]
+  },
+  "main": "index.js",
+  "dependencies": {},
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

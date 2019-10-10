@@ -1,0 +1,25 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="ZKAV.HW2_UI5_COURSE.controller.DeploydInfo"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<App>
+		<pages>
+			<Page title="{i18n>deploydInfoView}">
+				<headerContent>
+					<Button xmlns="sap.m" xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" id="button0"
+						icon="sap-icon://navigation-left-arrow" press="action" action:wiring="\{'press':\{'navigation':\{'routeName':'View4'\}\}\}"/>
+				</headerContent>
+				<content>
+					 <Panel id="panel1" headerText="{i18n>panelHeader}" class="sapUiResponsiveMargin" width="auto">
+						<content>
+							<Label text="{i18n>personId}" width="100%" id="label3"/>
+							<Input xmlns="sap.m" value="{person>/id}" id="input0" width="20%"/>
+							<Label text="{i18n>personName}" width="100%" id="label4"/>
+							<Input xmlns="sap.m" value="{person>/name}" id="input1" width="40%"/>
+							<Label text="{i18n>personDescription}" width="100%" id="label5"/>
+							<Input xmlns="sap.m" value="{person>/description}" id="input2" width="40%"/>
+						</content>
+					</Panel>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

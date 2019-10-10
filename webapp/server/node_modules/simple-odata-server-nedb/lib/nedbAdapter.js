@@ -1,0 +1,90 @@
+/*!
+ * Copyright(c) 2018 Jan Blaha (pofider)
+ *
+ * Configure ODataServer to run on nedb
+ */
+
+var getDB
+
+function update (collection, query, update, req, cb) {
+  getDB(collection, function (err, db) {
+    if (err) {
+      return cb(err)
+    }
+
+    db.update(query, update, cb)
+  })
+}
+
+function remove (collection, query, req, cb) {
+  getDB(collection, function (err, db) {
+    if (err) {
+      return cb(err)
+    }
+
+    db.remove(query, cb)
+  })
+}
+
+function insert (collection, doc, req, cb) {
+  getDB(collection, function (err, db) {
+    if (err) {
+      return cb(err)
+    }
+
+    db.insert(doc, cb)
+  })
+}
+
+function query (collection, query, req, cb) {
+  getDB(collection, function (err, db) {
+    if (err) {
+      return cb(err)
+    }
+
+    var qr = query.$count ? db.count(query.$filter) : db.find(query.$filter, query.$select)
+
+    if (query.$sort) {
+      qr = qr.sort(query.$sort)
+    }
+    if (query.$skip) {
+      qr = qr.skip(query.$skip)
+    }
+    if (query.$limit) {
+      qr = qr.limit(query.$limit)
+    }
+
+    qr.exec(function (err, val) {
+      if (err) {
+        return cb(err)
+      }
+
+      if (!query.$inlinecount) {
+        return cb(null, val)
+      }
+
+      db.count(query.$filter, function (err, c) {
+        if (err) {
+          return cb(err)
+        }
+
+        cb(null, {
+          count: c,
+          value: val
+        })
+      })
+    })
+  })
+}
+
+module.exports = function (agetDB) {
+  getDB = agetDB
+  return function (odataServer) {
+    odataServer.update(update)
+      .remove(remove)
+      .query(query)
+      .insert(insert)
+
+    return odataServer
+  }
+}

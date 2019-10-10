@@ -1,0 +1,16 @@
+/* Enter your custom styles here */
+.sapMIBar-CTX .sapMTitle {
+    color: #0854a0;
+    text-shadow: 0 0 0.125rem #ffffff;
+}
+.sapMSLITitleOnly {
+    font-size: 1rem;
+    color: #0854a0;
+}
+.sapMIBar.sapMHeader-CTX {
+    color: #323a39;
+    background-color: #d5e5ff;
+    filter: none;
+    background-image: none;
+}
+

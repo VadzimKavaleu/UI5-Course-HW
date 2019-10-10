@@ -1,0 +1,62 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" controllerName="ZKAV.HW2_UI5_COURSE.controller.oData">
+	<App>
+		<pages>
+			<Page title="{i18n>tittleView5}">
+				<headerContent>
+					<Button xmlns="sap.m" xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" text="{i18n>buttonBack}" id="button0" icon="sap-icon://navigation-left-arrow" press="action" action:wiring="\{'press':\{'navigation':\{'routeName':'View4'\}\}\}"/>
+					<Button xmlns="sap.m" xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" text="{i18n>buttonMain}" id="button1" icon="sap-icon://back-to-top" press="action" action:wiring="\{'press':\{'navigation':\{'routeName':'View1'\}\}\}"/>
+				</headerContent>
+				<content>
+						<Table items="{Products>/}" id="List">
+						<items>
+							<ColumnListItem type="Navigation" press="onClick" id="item0">
+								<cells>
+									<Text text="{Products>ID}" id="text0"/>
+									<Text text="{Products>Name}" id="text1"/>
+									<Text text="{Products>Description}" id="text2"/>
+										<Text text="{Products>ReleaseDate}" id="text3"/>
+										<Text text="{Products>Rating}" id="text4"/>
+										<Text text="{Products>Price}" id="text5"/>
+									
+									
+								</cells>
+							</ColumnListItem>
+						</items>
+						<columns>
+							<Column id="column0">
+								<header>
+									<Label text="{i18n>productId}" id="label0"/>
+								</header>
+							</Column>
+							<Column id="column1">
+								<header>
+									<Label text="{i18n>productName}" id="label1"/>
+								</header>
+							</Column>
+							<Column id="column2">
+								<header>
+									<Label text="{i18n>productDescription}" id="label2"/>
+								</header>
+							</Column>
+							<Column id="column3">
+								<header>
+									<Label text="{i18n>productReleaseDate}" id="label3"/>
+								</header>
+							</Column>
+							<Column id="column4">
+								<header>
+									<Label text="{i18n>productRating}" id="label4"/>
+								</header>
+							</Column>
+							<Column id="column5">
+								<header>
+									<Label text="{i18n>productPrice}" id="label5"/>
+								</header>
+							</Column>
+						</columns>
+					</Table>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

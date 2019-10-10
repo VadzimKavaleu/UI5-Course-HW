@@ -1,0 +1,62 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" controllerName="ZKAV.HW2_UI5_COURSE.controller.View4">
+	<App>
+		<pages>
+			<Page title="{i18n>tittleView4}">
+				<subHeader>
+					<Bar>
+						<contentLeft>
+							<SearchField search="handleSearch" placeholder="Search by Name"/>
+						</contentLeft>
+					</Bar>
+				</subHeader>
+				<content>
+					<Table items="{person>/}" id="List">
+						<items>
+							<ColumnListItem type="Navigation" press="onClick" id="item0">
+								<cells>
+									<Text text="{person>id}" id="text0"/>
+									<Text text="{person>name}" id="text1"/>
+									<Text text="{person>description}" id="text2"/>
+									<Button xmlns="sap.m" text="Delete" id="button0_1569328444526" icon="sap-icon://delete" press="onDeletePress"/>
+									<Button xmlns="sap.m" text="Update" id="button0_1" icon="sap-icon://wrench" press="onbuttonpress"/>
+								</cells>
+							</ColumnListItem>
+						</items>
+						<columns>
+							<Column id="column0">
+								<header>
+									<Label text="{i18n>personId}" id="label0"/>
+								</header>
+							</Column>
+							<Column id="column1">
+								<header>
+									<Label text="{i18n>personName}" id="label1"/>
+								</header>
+							</Column>
+							<Column id="column2">
+								<header>
+									<Label text="{i18n>personDescription}" id="label2"/>
+								</header>
+							</Column>
+							<Column id="column3">
+								<header>
+									<Label text="{i18n>buttonDelete}" id="label7"/>
+								</header>
+							</Column>
+							<Column id="column4">
+								<header>
+									<Label text="{i18n>buttonUpdate}" id="label8"/>
+								</header>
+							</Column>
+						</columns>
+					</Table>
+				</content>
+				<headerContent>
+					<Button xmlns="sap.m" xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" text="{i18n>buttonBack}" id="button0" press="action" action:wiring="\{'press':\{'navigation':\{'routeName':'View3'\}\}\}" icon="sap-icon://navigation-left-arrow"/>
+					<Button xmlns="sap.m" xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" text="{i18n>buttonMain}" id="button1" press="action" action:wiring="\{'press':\{'navigation':\{'routeName':'View1'\}\}\}" icon="sap-icon://back-to-top"/>
+					<Button xmlns="sap.m" xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" text="{i18n>buttonNext}" id="button4" icon="sap-icon://navigation-right-arrow" press="action" action:wiring="\{'press':\{'navigation':\{'routeName':'oData'\}\}\}"/>
+				</headerContent>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

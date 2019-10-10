@@ -1,0 +1,39 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="ZKAV.HW2_UI5_COURSE.controller.oDataInfo"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<App>
+		<pages>
+			<Page title="{i18n>oDataInfoView}">
+				<headerContent>
+					<Button xmlns="sap.m" xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" id="button0"
+						icon="sap-icon://navigation-left-arrow" press="action" action:wiring="\{'press':\{'navigation':\{'routeName':'oData'\}\}\}"/>
+				</headerContent>
+				<content>
+					<Panel id="panel1" headerText="{i18n>SupplierInfo}" class="sapUiResponsiveMargin" width="auto">
+						<content>
+							<Label text="{i18n>SupplierId}" width="100%" id="label3"/>
+							<Input xmlns="sap.m" value="{Info>/ID}" id="input0" width="20%"/>
+							<Label text="{i18n>SupplierName}" width="100%" id="label4"/>
+							<Input xmlns="sap.m" value="{Info>/Name}" id="input1" width="40%"/>
+							
+						</content>
+					</Panel>
+					<Panel id="panel2" headerText="{i18n>SupplierAddress}" expandable="true" expanded="false" class="sapUiResponsiveMargin" width="auto">
+						<content>
+							<Label text="{i18n>SupplierStreet}" width="100%" id="label5"/>
+							<Input xmlns="sap.m" value="{Info>/Address/Street}" id="input2" width="40%"/>
+							<Label text="{i18n>SupplierCity}" width="100%" id="label6"/>
+							<Input xmlns="sap.m" value="{Info>/Address/City}" id="input3" width="40%"/>
+							<Label text="{i18n>SupplierState}" width="100%" id="label7"/>
+							<Input xmlns="sap.m" value="{Info>/Address/State}" id="input4" width="40%"/>
+							<Label text="{i18n>SupplierZipCode}" width="100%" id="label8"/>
+							<Input xmlns="sap.m" value="{Info>/Address/ZipCode}" id="input5" width="40%"/>
+								<Label text="{i18n>SupplierCountry}" width="100%" id="label9"/>
+							<Input xmlns="sap.m" value="{Info>/Address/Country}" id="input6" width="40%"/>
+						</content>
+					</Panel>
+					
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

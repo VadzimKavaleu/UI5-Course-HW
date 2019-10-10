@@ -1,0 +1,34 @@
+{
+    "application": {
+        "id": "",
+        "title": "ZKAV.HW2_UI5_COURSE.HW2_UI5_COURSE",
+        "type": "SAP_UI5_Component",
+        "componentUrl": "/",
+        "appUrl": "#HW2_UI5_COURSE-Display",
+        "navigationComponentName": "ZKAV.HW2_UI5_COURSE",
+        "intentSemanticObject": "HW2_UI5_COURSE",
+        "intentAction": "Display",
+        "html5ApplicationName": "hw2ui5course",
+        "HCPParentApplicationName": ""
+    },
+    "assignment": {
+        "groups": [
+            "5bd42594-88eb-443f-9e28-7675fdad827c"
+        ],
+        "contentPackages": [
+            "5f0ed135-4440-4321-be7c-e11cd76a2cc8"
+        ],
+        "categories": []
+    },
+    "tile": {
+        "type": "StaticTile",
+        "title": "SAP_UI5_COURSE_HW",
+        "subtitle": "",
+        "searchKeywords": "SAP_UI5_COURSE_HW,",
+        "displayIconUrl": "sap-icon://activity-items",
+        "displayInfoText": "",
+        "size": "1x1",
+        "serviceURL": "",
+        "refreshInterval": ""
+    }
+}
