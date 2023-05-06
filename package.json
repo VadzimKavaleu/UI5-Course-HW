@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "devDependencies": {
-    "@ui5/cli": "1.7.0",
+    "@ui5/cli": "3.1.2",
     "@sap/ui5-builder-webide-extension": "1.0.5"
   },
   "scripts": {
